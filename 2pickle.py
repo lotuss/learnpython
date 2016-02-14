@@ -1,24 +1,23 @@
-#coding:utf-8
-#pickleè…Œåˆ¶
+#pickleëçÖÆ
 
 import pickle
 
-#dumps(object)å°†å¯¹è±¡åºåˆ—åŒ–
+#dumps(object)½«¶ÔÏóĞòÁĞ»¯
 lista=["mingyue","jishi","you"]
 listb=pickle.dumps(lista)
 #print listb
 
-#loads(string)å°†å¯¹è±¡åŸè²Œæ¢å¤ï¼Œå¹¶ä¸”å¯¹è±¡ç±»å‹ä¹Ÿæ¢å¤ä¸ºåŸæ¥çš„æ ¼å¼
+#loads(string)½«¶ÔÏóÔ­Ñù»Ö¸´£¬²¢ÇÒ¶ÔÏóÀàĞÍÒ²»Ö¸´ÎªÔ­À´µÄ¸ñÊ½
 listc=pickle.loads(listb)
 #print listc
 
-#dump(object,file),å°†å¯¹è±¡å­˜å‚¨åˆ°æ–‡ä»¶é‡Œé¢åºåˆ—åŒ–
+#dump(object,file),½«¶ÔÏó´æ´¢µ½ÎÄ¼şÀïÃæĞòÁĞ»¯
 group1=("bajiu","wen","qingtian")
 f1=file('1.pk1','wb')
 pickle.dump(group1,f1,True)
 f1.close()
 
-#load(object,file)å­˜å‚¨åˆ°æ–‡ä»¶é‡Œé¢çš„æ•°æ®æ¢å¤
+#load(object,file)½«dump()´æ´¢ÔÚÎÄ¼şÀïÃæµÄÊı¾İ»Ö¸´
 f2=file('1.pk1','rb')
 t=pickle.load(f2)
 print t
